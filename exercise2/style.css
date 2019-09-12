@@ -1,0 +1,83 @@
+@@font-face {
+  font-family: belleza;
+  src:url(fonts/Belleza-Regular.ttf);
+}
+
+body {
+  background-color: wheat;
+}
+
+h1{
+  font-family: belleza;
+  letter-spacing: 1px;
+  /* color:rosybrown; */
+}
+
+h2{
+  font-family:'EB Garamond';
+  color:white;
+  letter-spacing: 10px;
+}
+
+h3{
+  font-family:'EB Garamond';
+  color:white;
+  letter-spacing:10px;
+}
+
+p{
+  font-family: 'EB Garamond';
+  letter-spacing:2px;
+  /* color:dimgray; */
+}
+
+a:link{
+  font-family:'EB Garamond';
+  letter-spacing: 3px;
+  text-decoration:none;
+  /* color:dimgray; */
+}
+
+a:visited{
+  color:black;
+}
+
+a:hover{
+  color:white;
+}
+
+.header{
+  margin-left:50px;
+  margin-top:50px;
+  width:100px;
+}
+
+#bio{
+  text-align:left;
+  width: 400px;
+  margin-top:-100px;
+  margin-left:50px;
+}
+
+#container{
+  margin-top:-250px;
+  margin-bottom:150px;
+  margin-left:200px;
+}
+
+#list{
+  width:600px;
+  margin-left:450px;
+  margin-top:-250px;
+  margin-bottom:100px;
+  display:inline-block;
+}
+
+.listsection{
+  width:300px;
+  float:left;
+}
+
+/* img{
+  width:50%;
+} */
