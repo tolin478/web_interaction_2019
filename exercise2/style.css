@@ -1,14 +1,9 @@
-@font-face {
-  font-family: belleza;
-  src:url(fonts/Belleza-Regular.ttf);
-}
-
 body {
   background-color: wheat;
 }
 
 h1{
-  font-family: belleza;
+  font-family: 'Belleza', sans-serif;
   letter-spacing: 1px;
   /* color:rosybrown; */
 }
