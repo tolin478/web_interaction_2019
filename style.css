@@ -1,11 +1,11 @@
 body{
-  background-color:ivory;
+  background-color:ghostwhite;
 }
 
 ul{
   list-style-position: inside;
   list-style-type:circle;
-  color:mediumblue;
+  color:tomato;
 }
 
 li{
@@ -17,14 +17,14 @@ li{
 
 h1{
   font-family:"Belleza", sans-serif;
-  color:tomato;
+  color:mediumblue;
   font-size:42px;
   margin-left:40px;
 }
 
 h2{
   font-family:"Work Sans", sans-serif;
-  color:mediumblue;
+  color:tomato;
   font-size:18px;
 }
 
@@ -38,7 +38,8 @@ a:visited{
 }
 
 a:hover{
-  text-decoration:underline wavy;
+  color:gold;
+  text-decoration:underline wavy gold;
 }
 
 #container{
