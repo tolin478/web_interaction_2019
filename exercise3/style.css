@@ -1,0 +1,111 @@
+body{
+  background-color:ghostwhite;
+}
+
+h1{
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  margin-left:5vw;
+  margin-top:5vw;
+}
+
+h2{
+  font-family:"Muli", sans-serif;
+  font-weight:bold;
+  letter-spacing:5px;
+  font-size:2vw;
+  color:red;
+}
+
+p{
+  font-family:"Muli", sans-serif;
+  font-size:1vw;
+}
+
+.bio{
+  text-align:left;
+  width:41vw;
+  height:26vw;
+  margin-left:40vw;
+  margin-top:50px;
+  display:inline-block;
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+
+}
+
+.section{
+  width:17vw;
+  float:left;
+  padding: 10px 20px 10px 20px;
+}
+
+a{
+  color:black;
+  text-decoration:underline;
+}
+
+a:hover{
+  color:red;
+  text-decoration:underline wavy red;
+}
+
+a:visited{
+  color:black;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+img{
+  width:15vw;
+  margin-top:.75vw;
+  transform: translatey(0px);
+	animation: float 3s ease-in-out infinite;
+}
+
+@media only screen and (max-width:1200px){
+
+
+}
+
+@media only screen and (max-width:1125px){
+  .bio{
+    margin-left:40px;
+    width:75vw;
+    height:45vw;
+  }
+
+  .section{
+    width:32vw;
+  }
+
+  p{
+    font-size:1.75vw;
+  }
+
+  h2{
+    font-size:3vw;
+  }
+
+  img{
+    width:25vw;
+    margin-top:5vw;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .section{
+    float:left;
+  }
+
+}
