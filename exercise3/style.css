@@ -73,11 +73,6 @@ img{
 	animation: float 3s ease-in-out infinite;
 }
 
-@media only screen and (max-width:1200px){
-
-
-}
-
 @media only screen and (max-width:1125px){
   .bio{
     margin-left:40px;
@@ -103,9 +98,14 @@ img{
   }
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
+
+  .bio{
+    height:500px;
+  }
+
   .section{
-    float:left;
+    width:200px;
   }
 
 }
