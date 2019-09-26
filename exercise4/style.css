@@ -1,0 +1,85 @@
+#container{
+  margin:0 auto;
+  width:1310px;
+  margin-top:150px;
+}
+
+.colon{
+  font-family:'Work Sans',sans-serif;
+  font-size:100px;
+  float:left;
+  margin-right:50px;
+  margin-top:100px;
+  margin-left:50px;
+  color:grey;
+  animation-name: animation-one;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-one{
+  0% {color:grey;}
+  50% {color:white;}
+  100% {color:grey;}
+}
+
+#hourcircle{
+  width:350px;
+  height:350px;
+  background-color: tomato;
+  border-radius: 175px;
+  float:left;
+  transition: .2s ease;
+  display:inline-block;
+
+}
+
+#hourcircle:hover{
+  box-shadow: 10px 10px 5px lightgrey;
+}
+
+#minutecircle{
+  width:350px;
+  height:350px;
+  background-color: cadetblue;
+  border-radius: 175px;
+  float:left;
+  transition: .2s ease;
+  display:inline-block;
+
+}
+
+#minutecircle:hover{
+  box-shadow: 10px 10px 5px lightgrey;
+}
+
+#secondcircle{
+  width:350px;
+  height:350px;
+  background-color: khaki;
+  border-radius: 175px;
+  float:left;
+  display:inline-block;
+
+}
+
+#circleclock1{
+  font-family:'Work Sans', sans-serif;
+  font-size:100px;
+  text-align:center;
+  color:white;
+}
+
+#circleclock2{
+  font-family:'Work Sans', sans-serif;
+  font-size:100px;
+  text-align:center;
+  color:white;
+}
+
+#circleclock3{
+  font-family:'Work Sans', sans-serif;
+  font-size:100px;
+  text-align:center;
+  color:white;
+}
