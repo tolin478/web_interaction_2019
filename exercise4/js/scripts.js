@@ -16,6 +16,7 @@ function getSeconds(){
   var second = new Date();
   var seconds = second.getSeconds();
   // document.getElementById("second").innerHTML = seconds;
+  document.getElementById("circleclock3").innerHTML = seconds;
 
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
   $('#secondcircle').css('background-color', randomColor);
@@ -34,21 +35,11 @@ function getMinutes(){
   var minute = new Date();
   var minutes = minute.getMinutes();
   // document.getElementById("minute").innerHTML = minutes;
-
-  $('#minutecircle').click(function(){
-
-    if(minuteShowing===false){
-      if(minutes<=9){
-        document.getElementById("circleclock2").innerHTML = "0"+minutes;
-      }else{
-        document.getElementById("circleclock2").innerHTML = minutes;
-      }
-      minuteShowing = true;
-    }else{
-      document.getElementById("circleclock2").innerHTML = null;
-      minuteShowing = false;
-    }
-  });
+  if(minutes<=9){
+    document.getElementById("circleclock2").innerHTML = "0"+minutes;
+  }else{
+    document.getElementById("circleclock2").innerHTML = minutes;
+  }
 
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -69,17 +60,45 @@ function getHours(){
     hours+=12;
   }
 
-  //CLICK FOR HOUR
-  $('#hourcircle').click(function(){
+  document.getElementById("circleclock1").innerHTML = hours;
 
-    if(hourShowing===false){
-      document.getElementById("circleclock1").innerHTML = hours;
-      hourShowing=true;
-    }else{
-      document.getElementById("circleclock1").innerHTML = null;
-      hourShowing=false;
-    }
-
-  });
+  setTimeout(getMinutes,1000);
 
 }
+
+//CLICK FOR HOUR
+$('#hourcircle').click(function(){
+
+  if(hourShowing===false){
+    $('#circleclock1').css('opacity',1);
+    hourShowing=true;
+  }else{
+    $('#circleclock1').css('opacity',0);
+    hourShowing=false;
+  }
+
+});
+
+//CLICK FOR MINUTE
+$('#minutecircle').click(function(){
+
+  if(minuteShowing===false){
+    $('#circleclock2').css('opacity',1);
+    minuteShowing = true;
+  }else{
+    $('#circleclock2').css('opacity',0);
+    minuteShowing = false;
+  }
+});
+
+//CLICK FOR SECONDS
+$('#secondcircle').click(function(){
+
+  if(secondShowing===false){
+    $('#circleclock3').css('opacity',1);
+    secondShowing = true;
+  }else{
+    $('#circleclock3').css('opacity',0);
+    secondShowing = false;
+  }
+});
