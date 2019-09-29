@@ -5,6 +5,8 @@ var hourShowing = false;
 var minuteShowing = false;
 var secondShowing = false;
 
+var hourChanged = false;
+
 getSeconds();
 getMinutes();
 getHours();
@@ -21,8 +23,9 @@ function getSeconds(){
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
   $('#secondcircle').css('background-color', randomColor);
 
+  var randomColor2 = colors[Math.floor(Math.random() * colors.length)];
   if(seconds==0){
-    $('#minutecircle').css('background-color',randomColor);
+    $('#minutecircle').css('background-color',randomColor2);
   }
 
   setTimeout(getSeconds,1000);
@@ -40,8 +43,6 @@ function getMinutes(){
   }else{
     document.getElementById("circleclock2").innerHTML = minutes;
   }
-
-  var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
   setTimeout(getMinutes,1000);
 
@@ -62,7 +63,7 @@ function getHours(){
 
   document.getElementById("circleclock1").innerHTML = hours;
 
-  setTimeout(getMinutes,1000);
+  setTimeout(getHours,1000);
 
 }
 
