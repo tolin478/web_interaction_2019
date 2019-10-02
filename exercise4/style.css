@@ -5,22 +5,22 @@
 }
 
 .colon{
-  font-family:'Work Sans',sans-serif;
+  font-family:'Rubik',sans-serif;
   font-size:100px;
   float:left;
   margin-right:50px;
   margin-top:100px;
   margin-left:50px;
-  color:grey;
+  color:black;
   animation-name: animation-one;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes animation-one{
-  0% {color:grey;}
+  0% {color:black;}
   50% {color:white;}
-  100% {color:grey;}
+  100% {color:black;}
 }
 
 #hourcircle{
@@ -64,29 +64,36 @@
 
 }
 
+#secondcircle:hover{
+  box-shadow: 10px 10px 5px lightgrey;
+}
+
 #circleclock1{
-  font-family:'Work Sans', sans-serif;
+  font-family:'Rubik', sans-serif;
   font-size:100px;
   text-align:center;
   color:white;
   opacity:0;
   transition:.2s ease;
+  margin-top:110px;
 }
 
 #circleclock2{
-  font-family:'Work Sans', sans-serif;
+  font-family:'Rubik', sans-serif;
   font-size:100px;
   text-align:center;
   color:white;
   opacity:0;
   transition: .2s ease;
+  margin-top:110px;
 }
 
 #circleclock3{
-  font-family:'Work Sans', sans-serif;
+  font-family:'Rubik', sans-serif;
   font-size:100px;
   text-align:center;
   color:white;
   opacity:0;
   transition: .2s ease;
+  margin-top:110px;
 }

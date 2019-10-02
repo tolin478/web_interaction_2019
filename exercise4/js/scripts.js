@@ -46,6 +46,10 @@ function getMinutes(){
 
   setTimeout(getMinutes,1000);
 
+  function changeHour(){
+    
+  }
+
 }
 
 
