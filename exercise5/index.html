@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Logo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      #tool{
+        position:fixed;
+        bottom:0;
+        left:0;
+        background-color:#f1f1f1;
+        padding:20px;
+        margin:10px;
+        border-radius:10px;
+        font-family:Helvetica;
+        font-size:14px;
+      }
+
+      #container{
+      }
+
+      #logoname{
+        text-align:center;
+        font-family:Space Mono;
+        margin-top:-450px;
+        color:tomato;
+      }
+
+      #logopic{
+        opacity:0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:350px;
+        margin-top:150px;
+      }
+
+      @font-face{
+        font-family:"Space Mono";
+        src:url("fonts/SpaceMono-Regular.ttf");
+      }
+
+      @font-face{
+        font-family:"Belleza";
+        src:url("fonts/Belleza-Regular.ttf");
+      }
+
+      @font-face{
+        font-family:"Be Vietnam";
+        src:url("fonts/BeVietnam-Regular.ttf");
+      }
+
+    </style>
+    </head>
+
+    <body>
+
+      <div id="container">
+      <img id="logopic" src="img.png" alt="logo image">
+      <p id="logoname">Natasha Tolia</p>
+      </div>
+
+      <div id="tool">
+        <select id="myFonts" onchange="fontFunction()">
+          <option value="Space Mono">Space Mono</option>
+          <option value="Belleza">Belleza</option>
+          <option value="Be Vietnam">Be Vietnam</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="checkBox" id="underlineCheck" onclick="underlineFunction()">Underline<br>
+        <input type="checkBox" id="boldCheck" onclick="boldFunction()">Bold<br>
+        <input type="checkBox" id="italicCheck" onclick = "italicFunction()">Italic
+
+        <br>
+        <br>
+
+        Size<input id="size" type = "range" value="16" min="16" max="150" step="1" oninput="sizeFunction()"><br>
+        Position (↔)<input id="xposition" type = "range" value="0" min="-800" max="800" step="1" oninput="xPositionFunction()"><br>
+        Position (↕)<input id="yposition" type = "range" value="-450" min="-450" max="100" step="1" oninput="yPositionFunction()">
+
+        <br>
+        <br>
+
+        <input type="checkBox" id="imageCheck" onclick = "addImage()">Logo Image<br>
+        <input type="checkBox" id="bgCheck" onclick = "addBackground()">BG Color<br>
+
+      </div>
+
+    </body>
+
+      <script src="scripts.js"></script>
+
+</html>
