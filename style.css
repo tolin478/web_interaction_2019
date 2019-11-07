@@ -19,7 +19,7 @@ li{
 h1{
   font-family:"Space Mono", monospace;
   color:mediumblue;
-  font-size:42px;
+  font-size:28px;
   margin-left:40px;
 }
 
@@ -54,21 +54,21 @@ a:hover{
 
 #readings{
   position:absolute;
-  margin-top:125px;
+  margin-top:100px;
   margin-left:10px;
 }
 
 #exercises{
   position:relative;
   float:left;
-  margin-top:125px;
+  margin-top:100px;
   margin-left:140px;
 }
 
 #projects{
   position:relative;
   float:left;
-  margin-top:125px;
+  margin-top:100px;
 }
 
 #dude{
@@ -83,5 +83,5 @@ a:hover{
   font-weight:bolder;
   margin-top:-20px;
   margin-left:40px;
-  font-size:24px;
+  font-size:20px;
 }
