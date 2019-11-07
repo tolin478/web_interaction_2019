@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css"/>
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+
+    body{
+      background-color:seashell;
+      overflow-x:hidden;
+      margin:0;
+      padding:0;
+    }
+
+    p{
+      font-family:'VT323';
+      color:#5e6475;
+      font-size:24px;
+      margin-top:-8.3vw;
+      margin-left:15vw;
+    }
+
+    #searchbar{
+      width:100vw;
+      height:10vw;
+      position:absolute;
+      margin-top:-1vw;
+      margin-left:-1vw;
+    }
+
+    #chatbox{
+      width:40vw;
+      height:40vw;
+      position:absolute;
+      margin-left:50vw;
+      margin-top:6vw;
+    }
+
+    #searchbarpng{
+      width:101.5%;
+    }
+
+    #chatboxpng{
+      width:100%;
+      display:block;
+    }
+
+    .botcontainer{
+      position:absolute;
+      width:30vw;
+      height:24vw;
+      margin-top:23vw;
+      margin-left:-15vw;
+      display:block;
+      /* background-color:white; */
+      transition:ease;
+    }
+
+    .botface{
+      position:absolute;
+      padding:0;
+      margin:0;
+    }
+
+    .eyebrows{
+      position:absolute;
+      padding:0;
+      margin:0;
+      animation:eyebrows 1.5s ease infinite;
+    }
+
+    .pupils{
+      position:absolute;
+      padding:0;
+      margin:0;
+      animation:pupils 2s ease infinite;
+    }
+
+    .blush{
+      position:absolute;
+      opacity:0;
+      padding:0;
+      margin:0;
+    }
+
+    .bgChangeBad{
+      animation:badAnswer 2s ease;
+      animation-iteration-count: 1;
+    }
+
+    .bgChangeGood{
+      animation:goodAnswer 2s ease;
+      animation-iteration-count: 1;
+    }
+
+    .shakeAnim{
+      animation:shake 0.5s linear;
+      animation-iteration-count:1;
+    }
+
+    .wiggleAnim{
+      animation:wiggle 1s linear;
+      animation-iteration-count:1;
+    }
+
+    .blushAnim{
+      animation: blush 1s ease;
+      animation-iteration-count: 1;
+    }
+
+    .bgGoodEnd{
+      animation: goodEnd 1s ease;
+      animation-iteration-count: 1;
+    }
+
+    .bgBadEnd{
+      animation: badEnd 1s ease;
+      animation-iteration-count: 1;
+    }
+
+    .blushEndAnim{
+      animation: blushEnd 1s ease;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes pupils{
+      0% {margin-left:0px;}
+      50% {margin-left:-15px;}
+      100% {margin-left:0px;}
+    }
+
+    @keyframes eyebrows{
+      0% {margin-top:0px;}
+      50% {margin-top:-15px;}
+      100% {margin-top:0px;}
+    }
+
+    @keyframes goodAnswer{
+      0% {background-color:seashell;}
+      50% {background-color:lavender;}
+      100% {background-color:seashell;}
+    }
+
+    @keyframes goodEnd{
+      0% {background-color:seashell;}
+      100% {background-color:lavender;}
+    }
+
+    @keyframes badAnswer{
+      0% {background-color:seashell;}
+      50% {background-color:darksalmon;}
+      100% {background-color:seashell;}
+    }
+
+    @keyframes badEnd{
+      0% {background-color:seashell;}
+      100% {background-color:darksalmon;}
+    }
+
+    @keyframes shake{
+      0% {margin-left:50vw;}
+      25% {margin-left:50.3vw;}
+      50% {margin-left:50vw;}
+      75% {margin-left:50.3vw;}
+      100% {margin-left:50vw;}
+    }
+
+    @keyframes wiggle{
+      0% {width:100%;}
+      25% {width:102%;}
+      50% {width:100%;}
+      75% {width:102%;}
+      100% {width:100%;}
+    }
+
+    @keyframes blush{
+      0% {opacity:0;}
+      50% {opacity:100;}
+      100% {opacity:0;}
+    }
+
+    @keyframes blushEnd{
+      0% {opacity:0;}
+      100% {opacity:100;}
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <div id=searchbar>
+      <img id=searchbarpng src="assets/searchbar.png">
+      <p id=urltext>www.bot.gov</p>
+    </div>
+
+    <div id=chatbox>
+      <img id=chatboxpng src="assets/chatbox.png">
+    </div>
+
+    <div class=botcontainer>
+      <img class=botface src="botlayers/bot_face2.png">
+      <img class=eyebrows src="botlayers/bot_eyebrows.png">
+      <img class=pupils src="botlayers/bot_pupils.png">
+      <img class=blush src="botlayers/bot_blush.png">
+    </div>
+
+    <div id="my-botui-app">
+      <bot-ui></bot-ui>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
