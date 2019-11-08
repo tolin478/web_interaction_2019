@@ -385,11 +385,16 @@ function goodend(){
   var randomBadEyebrow = madEyebrows[Math.floor(Math.random()*madEyebrows.length)];
   var randomGoodEyebrow = hepiEyebrows[Math.floor(Math.random()*hepiEyebrows.length)];
   var randomPupil = eyes[Math.floor(Math.random()*eyes.length)];
-  //permanently change bot_eyebrows
+  $("body").addClass("bgChangeGood");
+  $("#chatboxpng").addClass("wiggleAnim");
   $(".eyebrows").attr("src",randomGoodEyebrow);
-  $(".blush").addClass("blushEndAnim");
-  //permanently change bg color
-  $("body").addClass("bgGoodEnd");
+  $(".blush").addClass("blushAnim");
+  setTimeout(function () {
+    $("body").removeClass("bgChangeGood");
+    $("#chatboxpng").removeClass("wiggleAnim");
+    $(".eyebrows").attr("src","botlayers/bot_eyebrows.png");
+    $(".blush").removeClass("blushAnim");
+  }, 2000);
   botui.message.add({
     delay:1500,
     content: 'you know...youre not so bad.....'
@@ -426,10 +431,16 @@ function badend(){
   var randomBadEyebrow = madEyebrows[Math.floor(Math.random()*madEyebrows.length)];
   var randomGoodEyebrow = hepiEyebrows[Math.floor(Math.random()*hepiEyebrows.length)];
   var randomPupil = eyes[Math.floor(Math.random()*eyes.length)];
-  //permanently change bot_eyebrows
+  $("body").addClass("bgChangeBad");
+  $("#chatbox").addClass("shakeAnim");
   $(".eyebrows").attr("src",randomBadEyebrow);
-  //permanently change bg color
-  $("body").addClass("bgBadEnd");
+  $(".pupils").attr("src",randomPupil);
+  setTimeout(function () {
+    $("body").removeClass("bgChangeBad");
+    $("#chatbox").removeClass("shakeAnim");
+    $(".eyebrows").attr("src","botlayers/bot_eyebrows.png");
+    $(".pupils").attr("src","botlayers/bot_pupils.png");
+  }, 2000);
   botui.message.add({
     delay:1500,
     content:'will you take hint already??'
