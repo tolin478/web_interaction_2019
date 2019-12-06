@@ -1,0 +1,109 @@
+/* p{
+  font-family: 'Roboto Slab';
+  font-size:36px;
+}
+
+#container{
+  width:90vw;
+  margin: 0 auto;
+}
+
+#captions{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: 'Roboto Slab';
+  font-size:36px;
+}
+
+.food:hover{
+  color:cornflowerblue;
+}
+
+.misc:hover{
+  color:khaki;
+}
+
+.activities:hover{
+  color:tomato;
+}
+
+.groceries:hover{
+  color:darkseagreen;
+}
+
+#guide{
+
+}
+
+#food{
+  background-color:cornflowerblue;
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  float:left;
+  margin:25px;
+}
+
+#activities{
+  background-color:tomato;
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  float:left;
+  margin:25px;
+}
+
+#misc{
+  background-color:khaki;
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  float:left;
+  margin:25px;
+}
+
+#groceries{
+  background-color:darkseagreen;
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  float:left;
+  margin:25px;
+} */
+
+#container2{
+    margin: 0 auto;
+    width:420px;
+    /* background-color:white; */
+    /* height:800px; */
+}
+
+body{
+  /* background-color:lightgrey; */
+  text-transform: uppercase;
+}
+
+.payment{
+  width:400px;
+}
+
+#title{
+  font-family: 'VT323', monospace;
+  font-size:16px;
+  text-align:center;
+}
+
+.caption{
+  font-family: 'VT323', monospace;
+  font-size:16px;
+  float:left;
+  margin-left:15px;
+}
+
+.value{
+  font-family: 'VT323', monospace;
+  font-size:16px;
+  float:right;
+}

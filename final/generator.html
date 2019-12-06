@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>venmo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id=container2>
+
+    <div id=title>
+      <p>Venmo Payment Generator</p>
+      <br>
+      <p>Type of Payment</p>
+      <select id=chooseMode>
+        <option value="random">Random</option>
+        <option value="food">Food</option>
+        <option value="activity">Activity</option>
+        <option value="transit">Transit</option>
+      </select>
+      <br>
+      <br>
+      <button onclick="generate()">Generate</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class=payment>
+
+      <div class=caption>
+        <p></p>
+      </div>
+
+      <div class=value>
+        <p></p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</body>
+
+<script src=jquery.js></script>
+<script src=scripts.js></script>
+
+</html>
