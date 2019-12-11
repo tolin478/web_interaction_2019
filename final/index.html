@@ -9,8 +9,7 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1">
 
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,54 +17,42 @@
 
   <div id=container>
 
-  <button onclick="sortList()">Sort</button>
+    <div id=title>
 
-  <div id=text>
-    <p>transaction history</p>
-    <ul id="captions">
-      <li><span class=food id=yeet>yeet</span></li>
-      <li><span class=food>Eesh</span></li>
-      <li><span class=misc>Allowance....</span></li>
-      <li><span class=food>East. I thought you said. Udon weast</span></li>
-      <li><span class=food>Malaysia</span></li>
-      <li><span class=activities>Nyc gluttony</span></li>
-      <li><span class=groceries>Pumpkin beer hell</span></li>
-      <li><span class=groceries>Jeff bezos shallots scam</span></li>
-      <li><span class=food>No thai chicken rice allowed</span></li>
-      <li><span class=activities>If the hats missin..........ive gone Rafting and Mini Golfing</span></li>
-      <li><span class=groceries>T H M O R E S</span></li>
-      <li><span class=food>your histamine-packed ithe cream experience</span></li>
-      <li><span class=activities>golfland volcano hellhole</span></li>
-      <li><span class=food>Zoupo 2.0</span></li>
-      <li><span class=misc>Cloth</span></li>
-      <li><span class=activities>goose skate park entrance fee</span></li>
-      <li><span class=food>Fuckin bun mee united scam t e a</span></li>
-      <li><span class=activities>Lymes</span></li>
+      <p>Generate A Venmo Payment</p>
 
-      <li><span class=activities>Weeb extravaganza</span></li>
-      <!-- <span class=food>Le OOH eh le OOH</span> -->
-      <li><span class=food>mango wonderland</span></li>
-      <li><span class=activities>I'm in love with the coco</span></li>
-      <li><span class=activities>bcuz Zelle™©® snatched all my monetary possessions</span></li>
-      <li><span class=food>heheheheheheheheheheheehehehehe</span></li>
-      <li><span class=food>crunch</span></li>
-      <li><span class=activities>moana fan club dues</span></li>
-      <li><span class=misc>Reparations</span></li>
-      <li><span class=food>naruto is our god</span></li>
-      <li><span class=food>Recipe book from the creepy food anime</span></li>
-      <li><span class=misc>I love you</span></li>
-      <li><span class=food>the last supper</span></li>
-      <li><span class=activities>BITCH</span></li>
-      <li><span class=activities>Weeb parking</span></li>
-    </ul>
-  </div>
+      <br>
 
-  <div id=guide>
-    <div id=food></div>
-    <div id=activities></div>
-    <div id=misc></div>
-    <div id=groceries></div>
-  </div>
+      <p>Category</p>
+
+      <select id=chooseMode>
+        <option value="random">Random</option>
+        <option value="food">Food</option>
+        <option value="activity">Activity</option>
+        <option value="transit">Transit</option>
+      </select>
+
+      <br>
+      <br>
+
+      <button onclick="generate()">Generate</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class=payment>
+
+      <div class=caption>
+        <p></p>
+      </div>
+
+      <div class=value>
+        <p></p>
+      </div>
+
+    </div>
 
   </div>
 
