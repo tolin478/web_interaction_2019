@@ -302,6 +302,8 @@ var listValues = [
 console.log(listCaptions.length);
 console.log(listValues.length);
 
+var oldList = listCaptions.slice();
+
 for (i = 0; i < listCaptions.length; i++){
   console.log(listCaptions[i]);
   $(".listcaption").append("<p>" + listCaptions[i] + "</p>");
@@ -319,9 +321,9 @@ function sortCaptions(){
 
   if(sortChoice=="chrono"){
     $('.listcaption').empty();
-    for (i = 0; i < listCaptions.length; i++){
-      console.log(listCaptions[i]);
-      $(".listcaption").append("<p>" + listCaptions[i] + "</p>");
+    for (i = 0; i < oldList.length; i++){
+      console.log(oldList[i]);
+      $(".listcaption").append("<p>" + oldList[i] + "</p>");
     }
   }else if(sortChoice=="alpha"){
     $('.listcaption').empty();

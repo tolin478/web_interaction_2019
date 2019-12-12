@@ -3,6 +3,11 @@
     width:420px;
 }
 
+p{
+  margin:10;
+  padding:0;
+}
+
 body{
   text-transform: uppercase;
   font-family: 'VT323', monospace;
@@ -39,7 +44,7 @@ button{
 
 .listcaption{
   float:left;
-  width:300px;
+  width:350px;
 }
 
 .listprice{
@@ -62,7 +67,7 @@ button{
 .caption{
   float:left;
   margin-left:15px;
-  width:300px;
+  width:350px;
 }
 
 .value{
@@ -94,7 +99,19 @@ button{
     width:350px;
   }
 
+  #listDiv{
+    width:350px;
+  }
+
+  .listcaption{
+
+  }
+
   body{
+    font-size:10px;
+  }
+
+  button{
     font-size:10px;
   }
 
