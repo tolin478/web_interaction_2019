@@ -10,6 +10,8 @@
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Space+Mono&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -17,42 +19,76 @@
 
   <div id=container>
 
+    <div id=chooseDisplay>
+      <button onclick="displayList()">View Index</button>
+      <button onclick="displayGenerate()">Generate</button>
+    </div>
+
+
     <div id=title>
 
-      <p>Generate A Venmo Payment</p>
+      <p>an exploration in venmo payments</p>
 
-      <br>
+    </div>
 
-      <p>Category</p>
+    <div id=listDiv>
+
+      <center>
+      <p>index</p>
+      <p>sort by:</p>
+      <select id=chooseSort>
+        <option value="chrono">Chronological</option>
+        <option value="alpha">Alphabetical</option>
+        <!-- <option value="amount">By Amount</option> -->
+        <!-- <option value="transit">Transit</option> -->
+      </select>
+      <button onclick="sortCaptions()">sort</button>
+      </center>
+
+    <div class=listpayment>
+
+        <div class=listcaption>
+          <p></p>
+        </div>
+
+        <div class=listprice>
+          <p></p>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+    <div id=generateContainer>
+    <br>
+    <div id=generate-header>
+      <p>generate by category:</p>
 
       <select id=chooseMode>
         <option value="random">Random</option>
         <option value="food">Food</option>
         <option value="activity">Activity</option>
-        <option value="transit">Transit</option>
+        <!-- <option value="transit">Transit</option> -->
       </select>
-
-      <br>
-      <br>
-
       <button onclick="generate()">Generate</button>
-
     </div>
 
-    <br>
-    <br>
 
     <div class=payment>
 
-      <div class=caption>
-        <p></p>
-      </div>
+        <div class=caption>
+          <p></p>
+        </div>
 
-      <div class=value>
-        <p></p>
-      </div>
+        <div class=value>
+          <p></p>
+        </div>
 
     </div>
+
+  </div>
 
   </div>
 

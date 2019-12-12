@@ -1,113 +1,93 @@
-/* p{
-  font-family: 'Roboto Slab';
-  font-size:36px;
-}
-
-#container{
-  width:90vw;
-  margin: 0 auto;
-}
-
-#captions{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-  font-family: 'Roboto Slab';
-  font-size:36px;
-}
-
-.food:hover{
-  color:cornflowerblue;
-}
-
-.misc:hover{
-  color:khaki;
-}
-
-.activities:hover{
-  color:tomato;
-}
-
-.groceries:hover{
-  color:darkseagreen;
-}
-
-#guide{
-
-}
-
-#food{
-  background-color:cornflowerblue;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  float:left;
-  margin:25px;
-}
-
-#activities{
-  background-color:tomato;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  float:left;
-  margin:25px;
-}
-
-#misc{
-  background-color:khaki;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  float:left;
-  margin:25px;
-}
-
-#groceries{
-  background-color:darkseagreen;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  float:left;
-  margin:25px;
-} */
-
 #container{
     margin: 0 auto;
     width:420px;
-    /* background-color:white; */
-    /* height:800px; */
 }
 
 body{
-  /* background-color:lightgrey; */
   text-transform: uppercase;
+  font-family: 'VT323', monospace;
+  font-size:16px;
+  background-color:white;
+}
+
+button{
+  text-transform: uppercase;
+  background-color:white;
+  border:none;
+  font-family: 'VT323', monospace;
+  font-size:16px;
+  color:cornflowerblue;
+}
+
+#chooseDisplay{
+  text-align:center;
+}
+
+
+#title{
+  text-align:center;
+}
+
+#listDiv{
+  position:absolute;
+  width:400px;
+}
+
+.listpayment{
+  width:400px;
+}
+
+.listcaption{
+  float:left;
+  width:300px;
+}
+
+.listprice{
+  float:right;
+}
+
+#generateContainer{
+  display:none;
+}
+
+#generate-header{
+  text-align:center;
+  width:400px;
 }
 
 .payment{
   width:400px;
 }
 
-#title{
-  font-family: 'VT323', monospace;
-  font-size:16px;
-  text-align:center;
-}
-
 .caption{
-  font-family: 'VT323', monospace;
-  font-size:16px;
   float:left;
   margin-left:15px;
   width:300px;
 }
 
 .value{
-  font-family: 'VT323', monospace;
-  font-size:16px;
   float:right;
 }
+
+.food{
+  color:blue;
+}
+
+.activity{
+  color:red;
+}
+
+/* .addAnimClass{
+  animation-name: addAnim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes addAnim {
+  0% { margin-left:0;}
+  50% { margin-left:25px;}
+  100% { margin-left:0; }
+} */
 
 @media only screen and (max-width:375px){
   #container{
