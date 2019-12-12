@@ -53,11 +53,11 @@ button{
 
 #generateContainer{
   display:none;
+  width:400px;
 }
 
 #generate-header{
   text-align:center;
-  width:400px;
 }
 
 .payment{
@@ -103,16 +103,32 @@ button{
     width:350px;
   }
 
-  .listcaption{
+  #generateContainer{
+    width:350px;
+  }
 
+  .listpayment{
+    width:350px;
+  }
+
+  .listcaption{
+    width:300px;
+  }
+
+  .payment{
+    width:350px;
+  }
+
+  .caption{
+    width:300px;
   }
 
   body{
-    font-size:10px;
+    font-size:12px;
   }
 
   button{
-    font-size:10px;
+    font-size:12px;
   }
 
   #title{
