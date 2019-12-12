@@ -67,7 +67,7 @@ button{
 .caption{
   float:left;
   margin-left:15px;
-  width:350px;
+  width:300px;
 }
 
 .value{
@@ -112,7 +112,7 @@ button{
   }
 
   .listcaption{
-    width:300px;
+    width:290px;
   }
 
   .payment{
@@ -120,15 +120,15 @@ button{
   }
 
   .caption{
-    width:300px;
+    width:290px;
   }
 
   body{
-    font-size:12px;
+    font-size:15px;
   }
 
   button{
-    font-size:12px;
+    font-size:15px;
   }
 
   #title{

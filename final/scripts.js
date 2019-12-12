@@ -1,52 +1,3 @@
-// var clicked = false;
-//
-//   $("#yeet").click(function () {
-//     if(clicked==false){
-//       $("#yeet").text('$14.00');
-//       clicked = true;
-//     }else if(clicked==true){
-//       $("#yeet").text('yeet');
-//       clicked = false;
-//     }
-//   })
-//
-// // var firstpart = ['your', 'golfland','goose'];
-// // var secondpart = [];
-// // var thirdpart = [];
-//
-// function sortList() {
-//   var list, i, switching, b, shouldSwitch;
-//   list = document.getElementById("captions");
-//   switching = true;
-//   /* Make a loop that will continue until
-//   no switching has been done: */
-//   while (switching) {
-//     // start by saying: no switching is done:
-//     switching = false;
-//     b = list.getElementsByTagName("li");
-//     // Loop through all list-items:
-//     for (i = 0; i < (b.length - 1); i++) {
-//       // start by saying there should be no switching:
-//       shouldSwitch = false;
-//       /* check if the next item should
-//       switch place with the current item: */
-//       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-//         /* if next item is alphabetically
-//         lower than current item, mark as a switch
-//         and break the loop: */
-//         shouldSwitch = true;
-//         break;
-//       }
-//     }
-//     if (shouldSwitch) {
-//       /* If a switch has been marked, make the switch
-//       and mark the switch as done: */
-//       b[i].parentNode.insertBefore(b[i + 1], b[i]);
-//       switching = true;
-//     }
-//   }
-// }
-
 var listCaptions = [
   "🌲🍭",
   "Five bucks",
@@ -299,37 +250,37 @@ var listValues = [
   "$10.00",
 ];
 
-console.log(listCaptions.length);
-console.log(listValues.length);
+// console.log(listCaptions.length);
+// console.log(listValues.length);
 
 var oldList = listCaptions.slice();
 
 for (i = 0; i < listCaptions.length; i++){
-  console.log(listCaptions[i]);
+  // console.log(listCaptions[i]);
   $(".listcaption").append("<p>" + listCaptions[i] + "</p>");
 }
 
 for (i = 0; i < listValues.length; i++){
-  console.log(listValues[i]);
+  // console.log(listValues[i]);
   $(".listprice").append("<p>" + listValues[i] + "</p>");
 }
 
 function sortCaptions(){
 
   var sortChoice = document.getElementById("chooseSort").value;
-  console.log(sortChoice);
+  // console.log(sortChoice);
 
   if(sortChoice=="chrono"){
     $('.listcaption').empty();
     for (i = 0; i < oldList.length; i++){
-      console.log(oldList[i]);
+      // console.log(oldList[i]);
       $(".listcaption").append("<p>" + oldList[i] + "</p>");
     }
   }else if(sortChoice=="alpha"){
     $('.listcaption').empty();
     listCaptions.sort();
     for (i = 0; i < listCaptions.length; i++){
-      console.log(listCaptions[i]);
+      // console.log(listCaptions[i]);
       $(".listcaption").append("<p>" + listCaptions[i] + "</p>");
     }
   }
