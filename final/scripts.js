@@ -48,18 +48,21 @@
 // }
 
 //for FOOD
-var foodArray = ["Pumpkin beer","🍜","🍕","🍞","🍵","🐄","shallots","mango","Kbeebeeque","ithe cream","Zoupo"]
+var foodArray = ["Pumpkin beer","shallots","mango","Kbeebeeque","ithe cream","Zoupo","banh mi","meat","taco bell","bronch"];
+var foodEmojiArray = ["🍜","🍕","🍞","🍵","🐄","🧀","🥖","🍋","🍧","🥗","🥧","🍺","🍖","🍰","🍩","🍗","🍥","🍛","🥑","🌮"];
 
 //for ACTIVITIES
-var activitiesArray = ["Rafting and Mini Golfing","holiday inn express","golfland","🛒","💅"];
+var activitiesArray = ["Rafting and Mini Golfing","holiday inn express","golfland","hôtel","parking","cabin"];
+var activityEmojiArray = ["🛒","💅","🚘","🌃","🅱️","🆘","🚗","🇰🇷","💨","🎬"];
 
 //for RANDOM
-var descriptorArray = ["histamine-packed","goose skate park","Jeff bezos","malaysia","weeb","moana fan club","Pumpkin beer","Nyc","family","my","glug glug","Dank","lots and lots of"];
-var expletiveArray = ["fuckin","BITCH","hell","bitch","binch"];
-var itemArray = ["Pumpkin beer","Rafting and Mini Golfing","mango","shallots","dinner","Kbeebeeque","holiday inn express","ithe cream","Zoupo","D E B T","golfland","pot","ubi","beep beep"];
-var paymentArray = ["scam","Allowance....","gluttony","hellhole","experience","entrance fee","extravaganza","dues","supper","wonderland","love and friendship"];
-var onelinerArray = ["crunch","yeet","Reparations", "Cloth","heheheheheheheheheheheehehehehe","Tiddy"];
-var emojis = ["🎄","🧂","🍭","🍜","🚘","🌃","🍕","🍞","🍵","💦","🐄","🛒","🥵","💅","🧀","🥖","🍋","🥂","🍧","🥗","🥧"]
+var descriptorArray = ["your","histamine-packed","goose skate park","Jeff bezos","malaysia","weeb","moana fan club","Pumpkin beer","Nyc","family","my","glug glug","Dank","lots and lots of","drinks @","bogo", "Various","Five","Past Due","for"];
+// var expletiveArray = ["fuckin","BITCH","hell","bitch","binch"];
+var itemArray = ["Pumpkin beer","Rafting and Mini Golfing","mango","shallots","dinner","Kbeebeeque","holiday inn express","ithe cream","Zoupo","D E B T","golfland","pot","ubi","beep beep", "gasoline and The Toll", "banh mi","meat","hôtel","bronch","taco bell","parking","cabin"];
+var paymentArray = ["scam","Allowance....","gluttony","hellhole","experience","entrance fee","extravaganza","dues","supper","wonderland","love and friendship", "bucks", "shes","lyft","monies","cleaning fee"];
+var additionArrap = ["and one vote for MARIANNE", "DO impress me much","2.0"];
+var onelinerArray = ["crunch","yeet","Reparations", "Cloth","heheheheheheheheheheheehehehehe","Tiddy","ДУША","gong xi fa cai","I love you"];
+var emojis = ["🎄","🍭","🍜","🚘","🌃","🍕","🍞","🍵","💦","🐄","🛒","💅","🧀","🥖","🍋","🥂","🍧","🥗","🥧","🅱️","🆘","🍺","🍖","🍰","🍩","🍗","🚗","🇰🇷","💨","🍥","🎬","🍛","🥑","🌮"];
 
 function generate(){
   var mode = document.getElementById("chooseMode").value;
@@ -70,7 +73,7 @@ function generate(){
     randomGenerate();
   }else if(mode=="food"){
     foodGenerate();
-  }else if (mode=="acitivty"){
+  }else if (mode=="activity"){
     activityGenerate();
   }
 }
@@ -80,7 +83,7 @@ function randomGenerate(){
   var caption;
 
   var descriptor = descriptorArray[Math.floor(Math.random()*descriptorArray.length)];
-  var expletive = expletiveArray[Math.floor(Math.random()*expletiveArray.length)];
+  // var expletive = expletiveArray[Math.floor(Math.random()*expletiveArray.length)];
   var item = itemArray[Math.floor(Math.random()*itemArray.length)];
   var payment = paymentArray[Math.floor(Math.random()*paymentArray.length)];
   var oneliner = onelinerArray[Math.floor(Math.random()*onelinerArray.length)];
@@ -113,7 +116,7 @@ function randomGenerate(){
 function foodGenerate(){
 
   var descriptor = descriptorArray[Math.floor(Math.random()*descriptorArray.length)];
-  var expletive = expletiveArray[Math.floor(Math.random()*expletiveArray.length)];
+  // var expletive = expletiveArray[Math.floor(Math.random()*expletiveArray.length)];
   var food = foodArray[Math.floor(Math.random()*foodArray.length)];
   var payment = paymentArray[Math.floor(Math.random()*paymentArray.length)];
   var oneliner = onelinerArray[Math.floor(Math.random()*onelinerArray.length)];
@@ -142,5 +145,31 @@ function foodGenerate(){
 }
 
 function activityGenerate(){
+
+  var descriptor = descriptorArray[Math.floor(Math.random()*descriptorArray.length)];
+  // var expletive = expletiveArray[Math.floor(Math.random()*expletiveArray.length)];
+  var activity = activitiesArray[Math.floor(Math.random()*activitiesArray.length)];
+  var payment = paymentArray[Math.floor(Math.random()*paymentArray.length)];
+  var oneliner = onelinerArray[Math.floor(Math.random()*onelinerArray.length)];
+
+  var num1 = Math.floor(Math.random() * 50);
+  var num2 = Math.floor(Math.random() * 100);
+
+  var randomizer = Math.floor(Math.random() * 100);
+
+  if(randomizer<=75){
+    var caption = descriptor + " " + activity + " " + payment;
+  }else if(randomizer>75){
+    var caption = oneliner;
+  }
+
+  if(num2>10){
+    var price = "$" + num1 + "." + num2;
+  }else if(num2<10){
+    var price = "$" + num1 + ".0" + num2;
+  }
+
+  $(".caption").prepend("<p>" + caption);
+  $(".value").prepend("<p>" + price);
 
 }

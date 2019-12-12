@@ -109,9 +109,9 @@ body{
   float:right;
 }
 
-@media only screen and (max-width:200px){
+@media only screen and (max-width:375px){
   #container{
-    width:180px;
+    width:350px;
   }
 
   body{
